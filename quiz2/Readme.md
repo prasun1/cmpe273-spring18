@@ -15,32 +15,35 @@ FLASK_APP=hello.py flask run // For Starting the server
 
 GET 
 
-curl -i http://127.0.0.1:5000/lang // for get request. These are readonly requests
+ curl -i http://127.0.0.1:5000/lang // for get request. These are readonly requests
 
 POST users
 
-curl -i -X POST http://127.0.0.1:5000/user -d "name=Java"
+ curl -i -X POST http://127.0.0.1:5000/user -d "name=Java"
 
 Response
 
-HTTP/1.0 200 OK
+  HTTP/1.0 200 OK
 
 
-Content-Type: application/json
+  Content-Type: application/json
 
 
-Content-Length: 180
+  Content-Length: 180
 
 
-Server: Werkzeug/0.14.1 Python/3.6.4
+  Server: Werkzeug/0.14.1 Python/3.6.4
 
 
-Date: Mon, 26 Feb 2018 05:49:16 GMT
+  Date: Mon, 26 Feb 2018 05:49:16 GMT
 
 
-{
-  "languages": [
-    {
+
+
+  
+  
+   {"languages": [ {
+    
       "id": 1, 
       "name": "java"
     }, 
@@ -51,9 +54,7 @@ Date: Mon, 26 Feb 2018 05:49:16 GMT
     {
       "id": 3, 
       "name": "saxena"
-    }
-  ]
-}
+    }]}
 
 
 DELETE users
@@ -72,15 +73,15 @@ Server: Werkzeug/0.14.1 Python/3.6.4
 Date: Mon, 26 Feb 2018 05:50:30 GMT
 
 
-{
-  "languages": [
-    {
+ 
+
+  
+  
+    {"languages": [{
       "id": 2, 
       "name": "prasun"
     }, 
     {
       "id": 3, 
       "name": "saxena"
-    }
-  ]
-}
+    }]}
