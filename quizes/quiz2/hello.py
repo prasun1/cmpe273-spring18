@@ -35,10 +35,15 @@ def addOne():
      languages.append(language)
      return jsonify({'languages' : languages})
      
-@app.route('/langs/<id>',methods=['DELETE'])
+@app.route('/user/<id>',methods=['DELETE'])
 def remove(id):
-    print(languages[id])
     for i in range(len(languages)):
         if int(languages[i]['id']) == int(id):
                 languages.pop(i)
     return jsonify({'languages':languages})
+
+@app.route('/show/<id>',methods=['GET'])
+def show(id):
+    for i in range(len(languages)):
+        if int(languages[i]['id']) == int(id):
+            return jsonify({'languages':languages[i]})
