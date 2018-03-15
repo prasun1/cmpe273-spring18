@@ -89,3 +89,7 @@ Date: Mon, 26 Feb 2018 05:50:30 GMT
     ]
     
   }
+  
+  
+ GET 
+curl -i http://127.0.0.1:5000/show/1 // for get request. These are readonly requests(For this to work you have to post data  first)
